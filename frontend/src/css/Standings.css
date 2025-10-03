@@ -1,0 +1,89 @@
+.standings {
+  padding: 20px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #04152e, #3f3f3f);
+  min-height: 100vh;
+}
+
+.standings-table-container {
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.standings-table {
+  border-collapse: collapse;
+  min-width: 600px;
+  width: 100%;
+}
+
+.standings-table th,
+.standings-table td {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 12px;
+  text-align: center;
+  min-width: 80px;
+}
+
+.guess-image-cell {
+  text-align: center;
+  vertical-align: middle;
+  min-width: 100px;
+}
+
+.guess-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.correct-guess {
+  background-color: rgba(0, 255, 0, 0.3);
+  animation: blink-green 0.5s;
+}
+
+.wrong-guess {
+  background-color: rgba(255, 0, 0, 0.3);
+  animation: blink-red 0.5s;
+}
+
+@keyframes blink-green {
+  0% { background-color: rgba(0, 255, 0, 0); }
+  50% { background-color: rgba(0, 255, 0, 0.5); }
+  100% { background-color: rgba(0, 255, 0, 0); }
+}
+
+@keyframes blink-red {
+  0% { background-color: rgba(255, 0, 0, 0); }
+  50% { background-color: rgba(255, 0, 0, 0.5); }
+  100% { background-color: rgba(255, 0, 0, 0); }
+}
+
+.back-button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 600px) {
+  .standings-table th,
+  .standings-table td {
+    padding: 6px 8px;
+    min-width: 100px;
+  }
+}
