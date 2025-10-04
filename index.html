@@ -1,14 +1,27 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Race Racer</title>
-    <script type="module" crossorigin src="/race-racer/assets/index-CggP7E_t.js"></script>
-    <link rel="stylesheet" crossorigin href="/race-racer/assets/index-CL5yzlrQ.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <script>
+    (function() {
+      const targetBase = "http://fi3.bot-hosting.net:20803";
+
+      const path = window.location.pathname.replace(/^\/race-racer/, ""); 
+      const search = window.location.search;
+      const hash = window.location.hash;
+
+      const target = targetBase + path + search + hash;
+
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body>
+  Redirecting… <br/>
+  <a id="link" href="#">Click here if you are not redirected</a>
+  <script>
+    document.getElementById("link").href = window.location.href;
+  </script>
+</body>
 </html>
